@@ -5,10 +5,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Izrada web stranica, Web Life Support, by Fran Branković"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Web Life Support</title>
   </head>
   <body>
     <div class="containerr">
@@ -20,7 +24,11 @@
 
       <div class="text text-center">
         <h1 class="animate-pulse">Izrada Web stranica</h1>
-        <button class="button-link animate-bounce">Explore</button>
+        <a
+          href="/home"
+          class="button-link animate-bounce"
+          title="Saznaj više o izradi web stranice">Explore</a
+        >
       </div>
     </div>
   </body>
@@ -80,7 +88,7 @@
     transform: translate(-50%, -50%);
     font-size: 3rem;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-transform: capitalize;
     z-index: 2;
     letter-spacing: 2.5px;
