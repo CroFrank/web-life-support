@@ -40,18 +40,18 @@ export default function Form({ secret }: { secret: string }) {
   }
 
   return (
-    <div className="bg-gray-100 w-full pt-8">
+    <div className="bg-white w-full py-8" id="kontakt">
       <form
         method="POST"
         onSubmit={handleSubmit}
-        className="mx-auto rounded-md p-8 mb-20 w-full sm:max-w-[30rem] bg-gray-100"
+        className="mx-auto rounded-md p-8 w-full sm:max-w-[30rem] bg-gray-100"
       >
         <div className="mb-4">
           <label
             htmlFor="name"
             className="block text-gray-600 text-sm font-medium mb-2"
           >
-            Ime i prezime (ili tvrta) <span className="text-red-600">*</span>
+            Ime i prezime (ili tvrtka) <span className="text-red-600">*</span>
           </label>
           <input
             type="text"
@@ -95,7 +95,7 @@ export default function Form({ secret }: { secret: string }) {
               name="Message"
               rows={4}
               className="w-full border-2 border-gray-300 rounded-md p-2 text-slate-700"
-              placeholder="Your message here..."
+              placeholder="Pokušajte ukratko opisati Vašu buduću web stranicu."
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}

@@ -1,0 +1,36 @@
+---
+import { features } from "../utils/data"
+import Feature from "./Feature.astro"
+---
+
+<section
+  class="py-20 fixed-bg bg-fixed bg-cover bg-center h-full flex flex-col items-center"
+>
+  <div class="space-y-10 md:sapce-y-12">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <h2 class="text-white">{"Što nudimo".toUpperCase()}</h2>
+      <p class="text-white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </div>
+    <div class="grid lg:grid-cols-2 2xl:grid-cols-3 gap-2 place-items-center">
+      {
+        features.map((service: FeaturesProps) => {
+          return (
+            <Feature
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+            />
+          )
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .fixed-bg {
+    background-image: url("https://images.pexels.com/photos/1089440/pexels-photo-1089440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+</style>

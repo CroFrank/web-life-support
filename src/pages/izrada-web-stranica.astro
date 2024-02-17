@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Form from "../components/Form"
+import Hero from "../components/Hero.astro"
+import Pitch from "../components/Pitch.astro"
+import { Footer } from "../components/Footer"
+const secret = import.meta.env.SECRET_PASSWORD
+---
+
+<Layout>
+  <main class="flex flex-col">
+    <div class="w-full flex-1">
+      <Hero />
+      <Pitch />
+      <Form secret={secret} client:load />
+      <Footer />
+    </div>
+  </main>
+</Layout>
